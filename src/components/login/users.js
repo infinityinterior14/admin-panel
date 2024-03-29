@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Drawer from "../Drawer/Drawer";
 import { Divider } from "antd";
 import { Usercardprops } from "./usercardprops";
 import axios from "axios";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useReactToPrint } from "react-to-print";
 
 export const Users = () => {
   const history = useHistory();
+    const componentPDF = useRef();
+ 
   const [getuserdata, setuserdata] = useState([]);
   console.log(getuserdata);
   useEffect(() => {
@@ -22,6 +25,11 @@ export const Users = () => {
   });
   const totalusers = getuserdata.length;
   console.log(totalusers);
+  const genratePDF = useReactToPrint({
+    content: () => componentPDF.current,
+    documentTitle: "bookingdata",
+    // onAfterPrint: () => alert("data saved in pdf"),
+  });
   return (
     <Drawer
       users={
@@ -54,6 +62,15 @@ export const Users = () => {
               </div>
             </div>
           </div>
+          <h6
+            className="text-primary text-center text-uppercase mb-4"
+            style={{ fontSize: "30px" }}
+          >
+            This
+          </h6>
+          <h1 className="mb-4 text-center text-uppercase ">
+            Is Our Users
+          </h1>
           <div className="div">
             <table class="table">
               <thead>
@@ -75,6 +92,21 @@ export const Users = () => {
                 })}
               </tbody>
             </table>
+            <button
+              type="submit"
+              onClick={genratePDF}
+              className="me-2 convert_button"
+              style={{
+                backgroundColor: "#b19f6f",
+                width: "400px",
+                height: "50px",
+                border: "none",
+                borderRadius: "5px",
+                margin: "50px 350px",
+              }}
+            >
+              Convert To PDF
+            </button>
           </div>
         </div>
       }

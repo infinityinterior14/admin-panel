@@ -58,6 +58,15 @@ export const Contact = () => {
               </div>
             </div>
           </div>
+          <h6
+            className="text-primary text-center text-uppercase mb-4"
+            style={{ fontSize: "30px" }}
+          >
+            This
+          </h6>
+          <h1 className="mb-4 text-center text-uppercase ">
+            Is Our Clients Contacts
+          </h1>
           <div className="div">
             <table ref={componentPDF} class="table">
               <thead>
@@ -85,6 +94,14 @@ export const Contact = () => {
               type="submit"
               onClick={genratePDF}
               className="me-2 convert_button"
+              style={{
+                backgroundColor: "#b19f6f",
+                width: "400px",
+                height: "50px",
+                border: "none",
+                borderRadius: "5px",
+                margin: "50px 350px",
+              }}
             >
               Convert To PDF
             </button>

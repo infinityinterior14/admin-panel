@@ -214,28 +214,28 @@ const About = () => {
                           <div className="position-relative">
                             <img
                               className="img-fluid w-100"
-                              src="img\dhruvika.jpeg"
+                              src="img\team-pintrest.jpg"
                               alt=""
+                              style={{ width: "200px", height: "450px" }}
                             />
                             <div className="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                              <MdSystemUpdateAlt
-                                style={{
-                                  color: "#B19F6F",
-                                  width: "30px",
-                                  height: "30px",
-                                }}
-                              />
-
-                              <AiTwotoneDelete
-                                style={{
-                                  color: "#B19F6F",
-                                  width: "30px",
-                                  height: "30px",
-                                }}
-                              />
+                              <a
+                                className="btn btn-outline-primary text-center mr-2 px-0"
+                                style={{ width: 38, height: 38 }}
+                                href="#"
+                              >
+                                <i className="fab fa-facebook-f" />
+                              </a>
+                              <a
+                                className="btn btn-outline-primary text-center px-0"
+                                style={{ width: 38, height: 38 }}
+                                href="#"
+                              >
+                                <i className="fab fa-linkedin-in" />
+                              </a>
                             </div>
                             <div className="d-flex flex-column bg-secondary text-center py-3">
-                              <h5 className="text-white">Rajodiya Dhruvika</h5>
+                              <h5 className="text-white">Jay Mishra</h5>
                               <p className="m-0" style={{ color: "darkgrey" }}>
                                 Founder, CEO
                               </p>
@@ -247,29 +247,29 @@ const About = () => {
                             <div className="position-relative">
                               <img
                                 className="img-fluid w-100"
-                                src="img\drashti.jpg"
+                                src="img\team2-pintrest.jpg"
                                 alt=""
+                                style={{ width: "200px", height: "450px" }}
                               />
                               <div className="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                <MdSystemUpdateAlt
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
-
-                                <AiTwotoneDelete
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
+                                <a
+                                  className="btn btn-outline-primary text-center mr-2 px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-facebook-f" />
+                                </a>
+                                <a
+                                  className="btn btn-outline-primary text-center px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-linkedin-in" />
+                                </a>
                               </div>
                             </div>
                             <div className="d-flex flex-column bg-secondary text-center py-3">
-                              <h5 className="text-white">Malaviya Drashti</h5>
+                              <h5 className="text-white">Herish Trivedi</h5>
                               <p className="m-0" style={{ color: "darkgrey" }}>
                                 Head Of Designer
                               </p>
@@ -281,29 +281,29 @@ const About = () => {
                             <div className="position-relative">
                               <img
                                 className="img-fluid w-100"
-                                src="img/team-3.jpg"
+                                src="img\team-3 pintrest.jpg"
                                 alt=""
+                                style={{ width: "200px", height: "450px" }}
                               />
                               <div className="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                <MdSystemUpdateAlt
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
-
-                                <AiTwotoneDelete
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
+                                <a
+                                  className="btn btn-outline-primary text-center mr-2 px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-facebook-f" />
+                                </a>
+                                <a
+                                  className="btn btn-outline-primary text-center px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-linkedin-in" />
+                                </a>
                               </div>
                             </div>
                             <div className="d-flex flex-column bg-secondary text-center py-3">
-                              <h5 className="text-white">Lathiya Hetvi</h5>
+                              <h5 className="text-white">Shruti Thakre</h5>
                               <p className="m-0" style={{ color: "darkgrey" }}>
                                 Wholesale Manager
                               </p>
@@ -315,29 +315,29 @@ const About = () => {
                             <div className="position-relative">
                               <img
                                 className="img-fluid w-100"
-                                src="img\gopi.jpeg"
+                                src="img\team-4 pintrest.jpg"
                                 alt=""
+                                style={{ width: "200px", height: "450px" }}
                               />
                               <div className="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                <MdSystemUpdateAlt
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
-
-                                <AiTwotoneDelete
-                                  style={{
-                                    color: "#B19F6F",
-                                    width: "30px",
-                                    height: "30px",
-                                  }}
-                                />
+                                <a
+                                  className="btn btn-outline-primary text-center mr-2 px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-facebook-f" />
+                                </a>
+                                <a
+                                  className="btn btn-outline-primary text-center px-0"
+                                  style={{ width: 38, height: 38 }}
+                                  href="#"
+                                >
+                                  <i className="fab fa-linkedin-in" />
+                                </a>
                               </div>
                             </div>
                             <div className="d-flex flex-column bg-secondary text-center py-3">
-                              <h5 className="text-white">Gopi Gujrati</h5>
+                              <h5 className="text-white">Shivin Parmar</h5>
                               <p className="m-0" style={{ color: "darkgrey" }}>
                                 Team Manager
                               </p>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Drawer from "../Drawer/Drawer";
 import { Carousel } from "antd";
 import { IoIosBed } from "react-icons/io";
@@ -10,9 +10,26 @@ import { MdSystemUpdateAlt } from "react-icons/md";
 import { HiMiniSquare3Stack3D } from "react-icons/hi2";
 import { MdLiving } from "react-icons/md";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import axios from "axios";
+import { Servicecardprops } from "./servicecardprops";
 
 const Service = () => {
   const history = useHistory();
+    const [getdata, setdata] = useState([]);
+
+    // console.log(getdata);
+    useEffect(() => {
+      axios
+        .get("http://localhost:3000/testimonial/view")
+        .then((res) => {
+          // console.log(res.data.data);
+          setdata(res.data.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    });
+
   const contentStyle = {
     // height: '160px',
     color: "#fff",
@@ -142,7 +159,6 @@ const Service = () => {
                           partition that houses the spacious shower.
                         </p>
                       </div>
-                      
                     </div>
                     <div style={contentStyle}>
                       <div className="d-flex flex-column text-center bg-light mx-3 p-4">
@@ -162,7 +178,6 @@ const Service = () => {
                           practical and trendy
                         </p>
                       </div>
-                     
                     </div>
                     <div style={contentStyle}>
                       <div className="d-flex flex-column text-center bg-light mx-3 p-4">
@@ -257,98 +272,20 @@ const Service = () => {
                     Testimonial
                   </h6>
                   <h1 className="mb-4 section-title">What Our Clients Say</h1>
-                  <div className="d-flex justify-content-md-end">
-                  </div>
+                  <div className="d-flex justify-content-md-end"></div>
                   <Carousel autoplay slidesToShow={1}>
                     {" "}
                     {/* Set slidesToShow to 2 */}
-                    <div style={servicecontentStyle}>
-                      <div className="owl-carousel testimonial-carousel position-relative pb-5 mb-md-5">
-                        <div className="d-flex flex-column">
-                          <div className="d-flex align-items-center mb-3">
-                            <img
-                              className="img-fluid rounded-circle"
-                              src="img/testimonial-1.jpg"
-                              style={{ width: 60, height: 60 }}
-                              alt=""
-                            />
-                            <div className="ml-3">
-                              <h5>Mona Dhabalia</h5>
-                              <i>Mumbai</i>
-                            </div>
-                          </div>
-                          <p>
-                            It was really good to get my home interior done by
-                            Heavenly Home Interior and was really great to get
-                            it completed before 8 days of actual handover
-                            date...Good Job Guys...Really appreciate the team
-                            for their hard work and dedication..
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div style={servicecontentStyle}>
-                      <div className="d-flex flex-column">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            className="img-fluid rounded-circle"
-                            src="img/testimonial-2.jpg"
-                            style={{ width: 60, height: 60 }}
-                            alt=""
-                          />
-                          <div className="ml-3">
-                            <h5>Kowshik Kumar</h5>
-                            <i>Bengaluru</i>
-                          </div>
-                        </div>
-                        <p className="m-0">
-                          It was a great experience with Heavenly Home. Nice
-                          interior designs and quality works were delivered.
-                          Thanks to designer for his efforts and quick response
-                          to the queries. Although the project got a little
-                          delayed, I really appreciate and...
-                        </p>
-                      </div>
-                    </div>
-                    <div style={servicecontentStyle}>
-                      <div className="d-flex flex-column">
-                        <div className="d-flex align-items-center mb-3">
-                          <img
-                            className="img-fluid rounded-circle"
-                            src="img/testimonial-2.jpg"
-                            style={{ width: 60, height: 60 }}
-                            alt=""
-                          />
-                          <div className="ml-3">
-                            <h5>Vikas Singh</h5>
-                            <i>Surat</i>
-                          </div>
-                        </div>
-                        <p className="m-0">
-                          Very good design &amp; Insatllation loved the colour
-                          for lamination suggested overall very happy with the
-                          approach suggestions &amp; Implementation...Really
-                          appreciate the team for their hard work and
-                          dedication..
-                        </p>
-                        <div className="d-flex justify-content-md-center">
-                          <MdSystemUpdateAlt
-                            style={{
-                              color: "#B19F6F",
-                              width: "30px",
-                              height: "30px",
-                            }}
-                          />
-                          <AiTwotoneDelete
-                            style={{
-                              color: "#B19F6F",
-                              width: "30px",
-                              height: "30px",
-                            }}
-                          />
-                        </div>
-                      </div>
-                    </div>
+                    {getdata.map((el, index) => {
+                      return (
+                        <Servicecardprops
+                          img={"http://localhost:3000/images/" + el.img}
+                          name={el.name}
+                          city={el.city}
+                          desc={el.desc}
+                        />
+                      );
+                    })}
                   </Carousel>
                 </div>
               </div>

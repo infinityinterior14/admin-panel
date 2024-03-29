@@ -59,6 +59,16 @@ export const Order = () => {
               </div>
             </div>
           </div>
+
+          <h6
+            className="text-primary text-center text-uppercase mb-4"
+            style={{ fontSize: "30px" }}
+          >
+            This
+          </h6>
+          <h1 className="mb-4 text-center text-uppercase ">
+            Is Our Clients Oders
+          </h1>
           <div className="div">
             <table ref={componentPDF} class="table">
               <thead>

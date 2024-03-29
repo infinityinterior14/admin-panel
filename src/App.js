@@ -21,6 +21,7 @@ import { Users } from "./components/login/users";
 import { Dashbord } from "./components/dashbord/Dashbord";
 import { Contact } from "./components/contact/contact";
 import { Forget } from "./components/login/forget";
+import { Profile } from "./components/Drawer/profile";
 
 function App() {
   return (
@@ -79,7 +80,10 @@ function App() {
           <Signupform />
         </Route>
         <Route path="/forget">
-          <Forget/>
+          <Forget />
+        </Route>
+        <Route path="/profile">
+          <Profile/>
         </Route>
       </Switch>
     </Router>
